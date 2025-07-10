@@ -1,0 +1,38 @@
+<!DOCTYPE html lang = en>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Main page</title>
+    </head>
+    <body>
+        <h1>Homepage</h1>
+        <!-- anchor tag : used to add hyperlink text and embed links to text -->
+        <a href = "www.google.com">this takes u too google</a>
+        <!-- above redirects in same page thus unsafe -->
+        <p></p> 
+        <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">this takes u to the About The Odin Project</a>
+        <!-- the noopener value of the rel attribute ensures that a link opened in 
+        a new tab or window cannot
+        interact with or access the original page. Without it,
+        the new page can use JavaScript to manipulate the original page,
+        which poses a security risk. -->
+
+
+        <!-- these all were absolute paths linked to the page in order to do relative
+         linking we use a diffrent method (typically used to link pages of the same website)-->
+
+        <h1>Homepage</h1>
+        <!-- <a href="about.html">About</a> -->
+         <!-- commented as we moved it from same directory as index to new folder -->
+        <a href="pages/about.html">About</a>
+        <p></p>
+        <!-- typically ./ is done it account for errors  -->
+
+        <!-- adding pics to page -->
+        <img src="./images/dog.jpg" alt = "picture of a dog" height="300" width="300">
+        <!-- alt attirbute add to show text if image doesnt load -->
+         <!-- height , width attribute to resize pic -->
+
+
+    </body>
+</html>
