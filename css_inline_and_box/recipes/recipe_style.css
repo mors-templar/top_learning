@@ -1,0 +1,57 @@
+body{
+    background-color: rgba(0, 255, 255 , .3);
+}
+
+.head {
+    outline:auto;
+}
+
+.recipe-name {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.home {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+
+}
+
+.recipe-image{
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.image-caption{
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.description{
+    font-family: Helvetica , sans-serif;
+    font-style: normal;
+    outline: auto;
+    outline-offset: 5px;
+    text-align: justify;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.ingredients , .directions {
+    outline: auto;
+    outline-offset: 5px;
+}
+
+.list {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+}

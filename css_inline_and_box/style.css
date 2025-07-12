@@ -1,0 +1,20 @@
+* {
+    background: rgba(255, 0 , 212, .10);
+}
+
+.title {
+    background-color: rgba(255, 0 , 212, 0);
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    outline: auto;
+}
+
+.recipes {
+    background-color: white;
+    text-align: justify;
+    font-weight: bold;
+    outline: auto;
+    outline-style: double;
+    outline-color:rebeccapurple;
+}
