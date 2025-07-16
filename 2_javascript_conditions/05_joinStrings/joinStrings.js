@@ -8,10 +8,23 @@
 */
 
 // Add your code right below, good luck!
+// const fn = "Carlos"
+// const ln = "Stevenson"
+// const year = 1965
+// const byear = 1947
+// //greeting = `Hello! My name is ${fn} ${ln} and i am ${year -byear}s old`
+// //const greeting = "Hello! My name is " + fn + " " + ln + " and I am " + (year - byear).toString() + "s old";
+// const age = thisYear - birthYear;
+// const greeting = "Hello! My name is " + fn + " " + ln + " and I am " + age + "s old";
+// console.log("greeting")
 
-
-
-
+const firstName = "Carlos";
+const lastName = "Stevenson";
+const thisYear = 1965;
+const birthYear = 1947;
+const fullName = firstName + " " + lastName;
+const age = thisYear - birthYear;
+const greeting = "Hello! My name is " + fullName + " and I am " + age + " years old.";
 
 // Do not change this
 module.exports = {
