@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let rand = Math.random();
+    let x = Math.random();
 
     if (rand < 0.33) {
         return "rock";
