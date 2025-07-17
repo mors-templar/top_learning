@@ -50,8 +50,8 @@ function playGame(round = 1, humanScore = 0, computerScore = 0) {
         return;
     }
 
-    const humanChoice = getUserChoice();
-    const computerChoice = getComputerChoice();
+    let humanChoice = getUserChoice();
+    let computerChoice = getComputerChoice();
 
     let result = playRound(humanChoice, computerChoice);
 
