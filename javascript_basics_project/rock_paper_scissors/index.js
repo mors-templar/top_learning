@@ -9,3 +9,9 @@ function getComputerChoice() {
         return "scissors";
     }
 }
+
+function getUserChoice()
+{
+    let uchoice = prompt("Enter your Choice");
+    return uchoice;
+}
