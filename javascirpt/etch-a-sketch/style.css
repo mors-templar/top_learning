@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 960px;
+    height: 960px;
   }
 
   .row {
@@ -14,9 +16,16 @@
   .square {
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: white;
     border: 1px solid;
-    border-color: white;
+    border-color: red;
     padding: 0%;
     margin: 0%;
+}
+
+.reset-btn{
+    background-color: aquamarine;
+}
+.reset-btn:hover{
+    background-color: lightsalmon;
 }
