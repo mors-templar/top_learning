@@ -1,7 +1,15 @@
-let container = document.getElementById("container")
-const grid_size = 16 
-for(let col = 0; col < grid_size; col++){
-    for(let row = 0; row < grid_size; row++){
+const container = document.getElementById("container");
+const gridSize = 16;
 
+for (let row = 0; row < gridSize; row++) {
+    const rowDiv = document.createElement("div");
+    rowDiv.classList.add("row");
+
+    for (let col = 0; col < gridSize; col++) {
+        const square = document.createElement("div");
+        square.classList.add("square");
+        rowDiv.appendChild(square);
     }
+
+    container.appendChild(rowDiv);
 }
