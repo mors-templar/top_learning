@@ -13,34 +13,37 @@
 .left-sub {
     border: 1px solid black;
     height: 560px;
-    width: 25px;
+
 }
 
 .center-sub {
     border: 1px solid black;
     height: 560px;
-    width: 25px;
 }
 
 .right-sub {
     border: 1px solid black;
     height: 560px;
-    width: 25px;
 }
 
 .row {
     display: flex;
-    gap: 0px;
-    margin: 0%;
+    gap: 5px;
+    margin: 5px;
     padding: 0%;
 }
 
 .square {
-    width: 30px;
-    height: 30px;
-    background-color: white;
+    background-color: lightblue;
     border: 1px solid;
-    border-color: red;
+
     padding: 0%;
     margin: 0%;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
 }
