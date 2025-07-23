@@ -1,4 +1,6 @@
 function generate_grid(r, c, input, arr) {
+    let displayed_items = document.getElementById("display");
+    displayed_items.textContent = "";
     const container = document.getElementById(input);
     let count = 0;
 
@@ -31,14 +33,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function get_buttontext(btn){
-    return btn.textContent
+    return btn.textContent;
 };
+let decimal_flag = false; 
 
-document.addEventListener("click" , (event) => {
-    if(event.target.classList.contains("calc-btn")) {
-        const text = get_buttontext(event.target);
-        console.log(text);
-    }
+function get_buttontext(btn){
+    return btn.textContent;
 }
-);
 
+document.addEventListener("click", (event) => {
+    let displayed_items = document.getElementById("display");
+    let prev_items = displayed_items.textContent;
+
+    if (event.target.classList.contains("calc-btn")) {
+        let text = get_buttontext(event.target);
+
+        if (text === ".") {
+            if (decimal_flag) {
+                alert("You can only have one decimal point.");
+                return;
+            } else {
+                decimal_flag = true;
+            }
+        }
+
+        if (["+", "-", "x", "÷", "%"].includes(text)) {
+            decimal_flag = false;
+        }
+
+        displayed_items.textContent = prev_items + text;
+    }
+});
