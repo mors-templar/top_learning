@@ -11,14 +11,10 @@ function generate_grid(r, c, input, arr) {
             square.classList.add("square");
 
             const button = document.createElement("button");
-            button.classList.add("btn-number");
+            button.classList.add("calc-btn");
 
-            if (count < arr.length) {
-                button.textContent = arr[count];
-            } else {
-                button.textContent = ""; // fallback in case of overflow
-            }
-
+            button.textContent = arr[count];
+            
             square.appendChild(button);
             rowDiv.appendChild(square);
             count++;
@@ -33,3 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
     generate_grid(4, 3, 'numbers',["9","8","7","6","5",'4',"3","2","1",".","0","ans"]);
     generate_grid(3, 2, 'operators' , ["+","-","x","÷","%","="]);
 });
+
+function get_buttontext(btn){
+    return btn.textContent
+};
+
+document.addEventListener("click" , (event) => {
+    if(event.target.classList.contains("calc-btn")) {
+        const text = get_buttontext(event.target);
+        console.log(text);
+    }
+}
+);
+
