@@ -29,17 +29,15 @@ function generate_grid(r, c, input, arr) {
 
 document.addEventListener("DOMContentLoaded", () => {
     generate_grid(4, 3, 'numbers',["9","8","7","6","5",'4',"3","2","1",".","0","ans"]);
-    generate_grid(3, 2, 'operators' , ["+","-","x","÷","%","="]);
+    generate_grid(3, 2, 'operators' , ["+","-","x","÷","AC","="]);
 });
 
 function get_buttontext(btn){
     return btn.textContent;
 };
-let decimal_flag = false; 
 
-function get_buttontext(btn){
-    return btn.textContent;
-}
+let decimal_flag = false; 
+let ans  = 0;
 
 document.addEventListener("click", (event) => {
     let displayed_items = document.getElementById("display");
@@ -48,6 +46,7 @@ document.addEventListener("click", (event) => {
     if (event.target.classList.contains("calc-btn")) {
         let text = get_buttontext(event.target);
 
+        // decimal check
         if (text === ".") {
             if (decimal_flag) {
                 alert("You can only have one decimal point.");
@@ -57,10 +56,40 @@ document.addEventListener("click", (event) => {
             }
         }
 
-        if (["+", "-", "x", "÷", "%"].includes(text)) {
+        // operator check
+        const lastChar = prev_items.slice(-1);
+        if (["+",  "x", "÷"].includes(text) && ["+",  "x", "÷"].includes(lastChar)) {
+            return;
+        }
+
+        // eval expression 
+        if(text === "=") {
+            let expression = prev_items.replace(/x/g, "*").replace(/÷/g, "/");
+            let result = eval(expression);
+            displayed_items.textContent = result;
+            ans = result;
+            decimal_flag = false;
+            return;
+        }
+
+        // handle 'ans'
+        if(text === "ans"){
+            displayed_items.textContent = prev_items + ans;
+            return;
+        }
+
+        // all clear 
+        if(text === "AC") {
+            displayed_items.textContent = "";
+            decimal_flag = false;
+            return
+        }
+
+        // reset decimal operator 
+        if (["+", "-", "x", "÷"].includes(text)) {
             decimal_flag = false;
         }
 
         displayed_items.textContent = prev_items + text;
-    }
+    }   
 });

@@ -4,10 +4,11 @@
     flex-direction: column;
 }
 
-.display {
+.display-box {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .left-sub {
@@ -18,12 +19,16 @@
 
 .center-sub {
     border: 1px solid black;
-    height: 560px;
+    padding: 0%;
+    margin: 0%;
+    gap: 0px;
 }
 
 .right-sub {
     border: 1px solid black;
-    height: 560px;
+    padding: 0%;
+    margin: 0%;
+    gap: 0px;
 }
 
 .row {
@@ -46,4 +51,10 @@
     flex-direction: row;
     justify-content: center;
     gap: 15px;
+}
+
+#display {
+    margin: 1px;
+    background-color: lightgray;
+    text-align: center;
 }
