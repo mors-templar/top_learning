@@ -49,9 +49,11 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
@@ -59,7 +61,13 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
 /* end of reset  */
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 header {
     display: flex;
@@ -84,7 +92,8 @@ img {
   width: 50px;
 }
 
-.middle-header {
+.middle-header  {
+    justify-self: center;
     font-size: large;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium';
@@ -94,6 +103,7 @@ img {
     list-style: none;
     display: flex;
     gap: 10px;
+    padding: 0;
 }
 
 .right-header li a {
@@ -107,6 +117,62 @@ footer {
     height: 50px;
     background-color: black;
 }
+
+.mainbody {
+    background-image: url("./images/abhi-verma-Y5CfLR8sqzE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 50px auto;
+    width: 50vw;
+    height: 75vh;
+}
+
+
+.sign-up-form h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    text-align: center;
+    
+}
+
+form input {
+    height: 24px;
+    width: 180px;
+    padding: 0;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    
+    font-size: small;
+    font-weight: bolder;
+}
+
+.name , .user-data {
+    display: flex;
+    gap: 10px;
+
+}
+
+
 
 
 
