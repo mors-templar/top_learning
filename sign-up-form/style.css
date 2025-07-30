@@ -1,0 +1,113 @@
+/* reset */
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/* end of reset  */
+
+header {
+    display: flex;
+    width: auto;
+    padding: 10px 20px 10px 20px;
+    --header-height: 70px;
+    height: var(--header-height);
+    background-color: chocolate;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px groove black;
+    border-style: groove;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+
+img {
+  height: calc(var(--header-height) - 20px);
+  width: 50px;
+}
+
+.middle-header {
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.right-header {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.right-header li a {
+  color: black;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+footer {
+    height: 50px;
+    background-color: black;
+}
+
+
+
+
