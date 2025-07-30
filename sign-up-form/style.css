@@ -161,7 +161,6 @@ form input {
 form label {
     display: flex;
     align-items: center;
-    
     font-size: small;
     font-weight: bolder;
 }
