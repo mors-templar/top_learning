@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left middle right";
+}
+
+.left {
+    grid-area: left;
+    background-color: lightcoral;
+}
+
+.middle {
+    grid-area: middle;
+    background-color: lightblue;
+}
+
+.right {
+    grid-area: right;
+    background-color: lightgreen;
+}
