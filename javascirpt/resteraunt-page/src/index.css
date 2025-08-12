@@ -1,11 +1,29 @@
-.logo > img {  
-    height: 50px;
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --accent-color: #ff9900;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo > img {
+    height: 50px;
 }
 
 nav {
@@ -13,7 +31,44 @@ nav {
     flex-direction: row;
     gap: 10px;
     align-items: center;
-    margin-right: 10px;
 }
 
+.tab {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
 
+.tab:hover {
+    color: var(--accent-color);
+}
+
+.tab.active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.page-content {
+    text-align: center;
+}
+
+.page-content h1 {
+    color: var(--accent-color);
+}
+
+.page-content p {
+    line-height: 1.6;
+}
