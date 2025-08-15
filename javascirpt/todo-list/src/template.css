@@ -36,6 +36,7 @@ nav {
     row-gap: 5px;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid 1px black;
 }
 
 .add  {
@@ -61,9 +62,65 @@ nav {
 
 }
 
+.high {
+    color: #D10000 ;
+    border-color: #D10000;
+    border-style: double;
+    border-radius: 999999px;
+    background-color: lightpink;
+}
 
+.medium {
+    color: #FDFD96;
+    border-color: #FDFD96;
+    border-style: double;
+    border-radius: 99999999px;
+    background-color: lightpink;
+}
 
+.low {
+    color: green;
+    border-color: green;
+    border-style: double;
+    border-radius: 999999px;
+    background-color: lightpink ;
+}
 
+.high:hover {
+    background-color: red;
+    color: white;
+}
+
+.medium:hover {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: white;
+}
+
+.low:hover {
+    background-color: green;
+    color: white;
+}
+
+.main-content {
+    padding: 0;
+    background-color: lightpink;
+    border: solid 1px black;
+    border-top: 0px;
+    background-image: url("./rss/scribbles.png");
+    background-blend-mode: lighten; 
+    display: grid;
+    grid-template-columns: 5% 75% 20%;
+    grid-template-areas:"border todo search";
+}
+
+.border {
+    background-color: lightcoral;
+}
+
+.search {
+    background-color: lightcoral;
+}
 
 
 footer {
