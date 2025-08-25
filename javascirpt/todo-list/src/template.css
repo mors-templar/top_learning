@@ -1,3 +1,18 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* This prevents scrolling */
+}
+
+.website-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
 :root {
     font-family: 'Times New Roman', Times, serif;
 }
@@ -5,10 +20,6 @@
 p {
     margin: 0;
     padding: 0;
-}
-
-body {
-    margin: 0;
 }
 
 header {
@@ -53,7 +64,7 @@ nav {
     padding: 0;
     border-radius: 999999px;
     font-weight: bolder;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .add button:hover {
@@ -99,13 +110,138 @@ nav {
 
 .search {
     background-color: lightcoral;
-    /* Added CSS to center content of the search div */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
 }
 
 footer {
     border-top: 4px solid salmon;
     background-color: black;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    background-color: transparent;
+}
+
+.task-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.task-card p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.task-card.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.complete-btn {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-btn:hover {
+    background-color: #45a049;
+}
+
+.filter-sort-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.filter-sort-container h4 {
+    margin: 10px 0 5px;
+}
+
+.filter-buttons, .sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.filter-btn, .sort-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-btn:hover, .sort-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #FFB6C1;
+    color: white;
+    border-color: #FFB6C1;
+}
+
+#search-bar {
+    width: 90%;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/* Style for priority buttons in the modal */
+.priority-btn {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 9999px; /* This creates the rounded shape */
+    cursor: pointer;
+    background-color: lightpink; /* Light pink background */
+    color: #444; /* Darker text color */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Color-code the specific priority buttons */
+.priority-btn[data-value="low"] {
+    background-color: #8fbc8f; /* DarkSeaGreen */
+    color: white;
+}
+.priority-btn[data-value="medium"] {
+    background-color: #f0e68c; /* Khaki */
+    color: #444;
+}
+.priority-btn[data-value="high"] {
+    background-color: #f08080; /* LightCoral */
+    color: white;
+}
+
+/* Style for when a button is active */
+.priority-btn.active {
+    filter: brightness(0.85); /* Darken the active button */
+    border-color: #333;
 }
